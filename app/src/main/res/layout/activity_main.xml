@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:context=".MainActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:resize_mode="fill"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:use_controller="false"/>
+
+    <Button android:id="@+id/pickVideoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Pick a Video"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText"/>
+
+    <TextView
+            android:id="@+id/durationView"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/videoTrimmerView"
+            android:layout_marginBottom="12dp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+
+    <idv.luchafang.videotrimmer.VideoTrimmerView
+            android:id="@+id/videoTrimmerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:vtv_window_bar_width="10dp"
+            app:vtv_window_border_color="@android:color/white"
+            app:vtv_window_border_width="2dp"
+            app:vtv_window_left_bar="@drawable/trimmer_left_bar"
+            app:vtv_window_right_bar="@drawable/trimmer_right_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
