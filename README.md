@@ -4,6 +4,21 @@
 
 Note that this is only the PURE android view. Consider using ffmpeg to actually trim the video.
 
+## Import to your project
+Add this to project level build.gradle
+```
+  allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+  }
+```
+
+And then in app level build.gradle
+```
+  implementation 'com.github.freddyfang:android-video-trimmer:v1.0.0'
+```
+
 ## How to Use
 ```
   videoTrimmerView
