@@ -20,6 +20,20 @@ And then in app level build.gradle
 ```
 
 ## How to Use
+***Layout xml***
+```
+  <idv.luchafang.videotrimmer.VideoTrimmerView
+        android:id="@+id/videoTrimmerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:vtv_window_bar_width="10dp"
+        app:vtv_window_border_color="@android:color/white"
+        app:vtv_window_border_width="2dp"
+        app:vtv_window_left_bar="@drawable/trimmer_left_bar"
+        app:vtv_window_right_bar="@drawable/trimmer_right_bar"/>
+```
+
+***Display it***
 ```
   videoTrimmerView
     .setVideo(File(path))
@@ -31,6 +45,7 @@ And then in app level build.gradle
     .show()
 ```
 
+***OnSelectedRangeChangedListener***
 ```
   override fun onSelectRangeStart() {
     // Start to drag range bar or start to scroll the video frame list
