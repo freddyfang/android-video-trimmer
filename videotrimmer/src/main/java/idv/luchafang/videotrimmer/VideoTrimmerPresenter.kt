@@ -9,7 +9,7 @@ import kotlin.math.ceil
 import kotlin.math.min
 import kotlin.math.roundToLong
 
-class VideoTrimmerPresenter : VideoTrimmerContract.Presenter,
+internal class VideoTrimmerPresenter : VideoTrimmerContract.Presenter,
     SlidingWindowView.Listener,
     VideoFramesScrollListener.Callback {
 

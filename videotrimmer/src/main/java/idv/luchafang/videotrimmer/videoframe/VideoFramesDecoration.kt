@@ -8,7 +8,7 @@ import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class VideoFramesDecoration(
+internal class VideoFramesDecoration(
         private val horizontalMargin: Int,
         @ColorInt private val overlayColor: Int
 ) : RecyclerView.ItemDecoration() {

@@ -17,7 +17,6 @@ import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import idv.luchafang.videotrimmer.VideoTrimmerView
-import idv.luchafang.videotrimmer.tools.dpToPx
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 
@@ -109,7 +108,7 @@ class MainActivity : AppCompatActivity(), VideoTrimmerView.OnSelectedRangeChange
             .setMaxDuration(30_000)
             .setMinDuration(3_000)
             .setFrameCountInWindow(8)
-            .setExtraDragSpace(dpToPx(this, 2f))
+            .setExtraDragSpace(dpToPx(2f))
             .setOnSelectedRangeChangedListener(this)
             .show()
     }
@@ -158,5 +157,10 @@ class MainActivity : AppCompatActivity(), VideoTrimmerView.OnSelectedRangeChange
     private fun showDuration(startMillis: Long, endMillis: Long) {
         val duration = (endMillis - startMillis) / 1000L
         durationView.text = "$duration seconds selected"
+    }
+
+    private fun dpToPx(dp: Float): Float {
+        val density = resources.displayMetrics.density
+        return dp * density
     }
 }

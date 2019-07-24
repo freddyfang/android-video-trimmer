@@ -3,7 +3,7 @@ package idv.luchafang.videotrimmer
 import idv.luchafang.videotrimmer.data.TrimmerDraft
 import java.io.File
 
-interface VideoTrimmerContract {
+internal interface VideoTrimmerContract {
     interface View {
         fun getSlidingWindowWidth(): Int
         fun setupAdaptor(video: File, frames: List<Long>, frameWidth: Int)
