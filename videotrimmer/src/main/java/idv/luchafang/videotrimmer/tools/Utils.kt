@@ -11,12 +11,12 @@ import android.view.animation.LinearInterpolator
 import kotlin.math.max
 import kotlin.math.roundToInt
 
-fun dpToPx(context: Context, dp: Float): Float {
+internal fun dpToPx(context: Context, dp: Float): Float {
     val density = context.resources.displayMetrics.density
     return dp * density
 }
 
-fun scaleBitmap(bitmap: Bitmap, size: Int): Bitmap {
+internal fun scaleBitmap(bitmap: Bitmap, size: Int): Bitmap {
     val width = bitmap.width
     val height = bitmap.height
     val max = max(width, height)
@@ -29,7 +29,7 @@ fun scaleBitmap(bitmap: Bitmap, size: Int): Bitmap {
     } else bitmap
 }
 
-fun animateAlpha(
+internal fun animateAlpha(
     view: View,
     from: Float = view.alpha,
     to: Float,
@@ -54,7 +54,7 @@ fun animateAlpha(
     }
 }
 
-fun extractVideoLength(videoPath: String): Long {
+internal fun extractVideoLength(videoPath: String): Long {
     val retriever = try {
         MediaMetadataRetriever()
             .apply { setDataSource(videoPath) }

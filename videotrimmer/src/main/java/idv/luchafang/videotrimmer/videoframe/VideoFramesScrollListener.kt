@@ -3,7 +3,7 @@ package idv.luchafang.videotrimmer.videoframe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class VideoFramesScrollListener(
+internal class VideoFramesScrollListener(
         private val horizontalMargin: Int,
         private val callback: Callback
 ) : RecyclerView.OnScrollListener() {

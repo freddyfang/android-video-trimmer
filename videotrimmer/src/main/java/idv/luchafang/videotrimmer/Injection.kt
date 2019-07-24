@@ -1,3 +1,3 @@
 package idv.luchafang.videotrimmer
 
-fun obtainVideoTrimmerPresenter() = VideoTrimmerPresenter()
+internal fun obtainVideoTrimmerPresenter() = VideoTrimmerPresenter()

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import idv.luchafang.videotrimmer.tools.SetVideoThumbnailAsyncTask
 import java.io.File
 
-class VideoFramesAdaptor(
+internal class VideoFramesAdaptor(
         private val video: File,
         private val frames: List<Long>,
         private val frameWidth: Int

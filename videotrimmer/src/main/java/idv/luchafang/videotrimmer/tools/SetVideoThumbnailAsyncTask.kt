@@ -10,7 +10,7 @@ import android.widget.ImageView
 import java.io.File
 import java.lang.ref.WeakReference
 
-class SetVideoThumbnailAsyncTask @JvmOverloads constructor(
+internal class SetVideoThumbnailAsyncTask @JvmOverloads constructor(
         view: ImageView,
         private val timeMs: Long = 0L,
         private val size: Int = 512,
